@@ -8,24 +8,21 @@
     <link rel = "stylesheet" href = "/css/homepage.css">
 </head>
 <body>
-    <script src = "/js/homepage.js"></script>
-    <input type="search" class="search-container" placeholder="Search For Cities">
-    <div class="city">Gorakhpur </div>
-    <div class="rain-percentage">Chances Of Rain: 5%</div>
-    <div class="temperature">25°</div>
-    <div><img src="/assets/icons/sunny.png" class="weather-icon"></div>
-    <div class="forecast-future">
-      <p id="forecast-heading">7 Days Forecast</p>
-      <div class="days">
-       <div></div>
-       <div></div>
-       <div></div>
-       <div></div>
-       </table>
-      
-        
-      </div>
+    
+    <h2>Welcome To SkyCast</h2>
+    <input type="text" class="search-container" placeholder="Search For City">
+    <div class="btn">
+      <button class="search-btn" onclick="fetchWeatherData()">Search</button><button class="currentLocation-btn" onclick="fetchWeatherData()">Current Location</button>
     </div>
+    
+    <div class="city"> </div>
+    
+    <div class="rain-percentage"></div>
+    <div class="temperature"></div>
+    <div><img class="weather-icon"></div>
 
+
+
+    <script src = "/js/homepage.js"></script>
 </body>
 </html>
