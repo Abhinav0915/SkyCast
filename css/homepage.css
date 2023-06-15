@@ -3,6 +3,8 @@ body{
     display: block;
 }
 h2{
+    display: flex;
+    justify-content: center;
     text-align: center;
     margin-top: 60px;
     margin-left: 10px;
@@ -12,7 +14,9 @@ h2{
     user-select: none;
 }
 .search-container{
+    align-items: center;
     display: flex;
+    justify-content: center;
     margin-top: 5%;
     margin-left: 350px;
     height: 50px;
@@ -24,6 +28,7 @@ h2{
     color: white;
     font-size: 20px;
     user-select: none;
+    
 }
 .btn{
     display: flex;
@@ -100,17 +105,24 @@ h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     user-select: none;
 }
-.weather-icon{
+.weather-icon {
     position: fixed;
     margin-top: 10px;
     top: 55%;
     left: 62%;
     height: 200px;
     width: 200px;
+    border-color: 1px solid black;
     user-select: none;
-    
-    
-}
+    outline: none; /* Remove outline around the image */
+  }
+  
+  .weather-icon img {
+    visibility: hidden; /* Hide the image element when there is no image */
+  }
+  
+  
+
 .forecast-future{
    position: fixed;
     top: 20%;

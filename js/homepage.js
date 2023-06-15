@@ -1,5 +1,4 @@
 function fetchWeatherData() {
-    // Replace YOUR_API_KEY with your actual API key from weatherapi.com
     const apiKey = '9466314c5d5d4f288d182226231406';
     const searchInput = document.querySelector('.search-container');
     const city = document.querySelector('.city');
@@ -20,8 +19,30 @@ function fetchWeatherData() {
         weatherIcon.src = data.current.condition.icon;
       })
       .catch(error => console.error('Error:', error));
+
+      if (searchInput.value == "") {
+        alert("Please enter a city");
+      }
+
+      // Clear the input field
+      searchInput.value = '';
+
+      //if not a valid city
+      if (data.location.name == "") {
+        alert("Please enter a valid city");
+      }
+   }
+
+   if (weatherData.weatherIcon) {
+    document.querySelector('.weather-icon img').src = weatherData.weatherIcon;
+  } else {
+    document.querySelector('.weather-icon img').addEventListener('load', () => {
+      document.querySelector('.weather-icon').style.visibility = 'visible';
+    });
+    
   }
 
-  // Add event listener to trigger fetchWeatherData() on search input change
-//   document.querySelector('.search-container').addEventListener('change', fetchWeatherData);
+
+    // Listen for the form submit event, then call the fetchWeatherData function
+// document.querySelector('.search-container').addEventListener('change', fetchWeatherData);
 
