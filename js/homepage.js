@@ -36,10 +36,7 @@ function fetchWeatherData() {
    if (weatherData.weatherIcon) {
     document.querySelector('.weather-icon img').src = weatherData.weatherIcon;
   } else {
-    document.querySelector('.weather-icon img').addEventListener('load', () => {
-      document.querySelector('.weather-icon').style.visibility = 'visible';
-    });
-    
+    document.querySelector('.weather-icon img').style.visibility = 'hidden';
   }
 
 

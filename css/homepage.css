@@ -117,9 +117,12 @@ h2{
     outline: none; /* Remove outline around the image */
   }
   
-  .weather-icon img {
-    visibility: hidden; /* Hide the image element when there is no image */
-  }
+ img{
+    visibility: hidden;
+ }
+    .weather-icon:hover{
+        visibility: visible;
+    }
   
   
 
