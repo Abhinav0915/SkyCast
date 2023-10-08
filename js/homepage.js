@@ -25,7 +25,7 @@ function fetchWeatherData() {
       }
 
       // Clear the input field
-      searchInput.value = '';
+      // searchInput.value = '';
 
       //if not a valid city
       if (data.location.name == "") {
